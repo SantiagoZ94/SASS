@@ -1,0 +1,18 @@
+/* lista */
+
+$colores: 
+tomato,
+green,
+pink,
+coral, 
+grey; 
+
+$font-size:
+12px,
+16px,
+20px,
+30px;
+
+.encabezados-principales{
+    font-size: nth($font-size, 4);
+}

@@ -1,0 +1,24 @@
+/*nesting o andamiento*/
+header {
+  background-color: #E63946;
+  /*MEDUI QUERY*/
+}
+header nav ul {
+  list-style: none;
+}
+header nav ul li {
+  list-style: circle;
+}
+header nav ul li a {
+  text-decoration: underline;
+}
+header nav ul li a:hover {
+  color: #457B9D;
+}
+@media screen and (max-width: 450px) {
+  header {
+    background-color: #1D3557;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

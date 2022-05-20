@@ -1,0 +1,25 @@
+/*nesting o andamiento*/
+@import '../base/variables';
+
+
+header{
+    background-color: $bg-color-general; 
+    nav{
+        ul{
+            list-style: none;
+            li{
+                list-style: circle;
+                a{ text-decoration: underline;
+                   &:hover{
+                       color: #457B9D;
+                   }
+
+                }
+            }
+        }
+    }
+/*MEDUI QUERY*/
+@media screen and(max-width:450px){
+    background-color: #1D3557
+}
+}
