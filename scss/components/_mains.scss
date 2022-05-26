@@ -1,7 +1,8 @@
 @import '../base/mapas';
+@import '../base/extends';
 /*   MAIN INDEX   */
 .hero {
-    width: 100%;
+    width: 100vw;
     height: 80vh;
     background: linear-gradient(rgba(0, 0, 0, 0.432), rgba(0, 0, 0, 0.432)),url(https://img.freepik.com/foto-gratis/medicos-enfermeras-coordinan-manos-concepto-trabajo-equipo_43314-961.jpg?w=1380);
     background-position: center;
@@ -28,25 +29,20 @@
 
 /*Opiniones*/
 .opiniones {
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
     margin-top: 60px;
     padding-bottom: 120px;
+    @extend %flex-around; 
 }
 .opiniones-inicio {
-    background-color: #F1FAEE;
     margin: 30px 30px 30px 30px;
 }
 
 /*   MAIN SERVICIOS   */
 
 .servicios {
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
     margin-top: 60px;
     padding-bottom: 120px;
+    @extend %flex-around;
 }
 .servicio-x {
     padding: 30px 30px 30px 30px;
@@ -57,11 +53,10 @@
 
 /* botones de servicio*/
 .boton-servicios {
-    background-color: map-get($boton, bg-boton);
-    text-decoration: map-get($boton, text-decoration);
-    border: map-get($boton, border);
-    font-size: map-get($boton, color-text);
-    font-size: map-get($boton, font-size-boton);
+  background-color: map-get($boton1, color);
+  border: map-get($boton1, borde);
+  border-radius: map-get($boton1, radio);
+  font-size: map-get($boton1, texto);
 }  
 /*MEDIA QUERY TABLET*/
 @media (min-width:451px) and (max-width:960px)  {
@@ -74,4 +69,16 @@
         justify-content: space-around;
     align-content: center;
 }
+}
+/*MEDIA QUERY MOBILE*/
+@media (max-width:450px) {
+    /*MAIN MOBILE*/
+    .opiniones{
+        flex-direction: column;
+    }
+    .servicios{
+        flex-direction: column;
+        justify-content: space-around;
+    align-content: center;
+    }
 }

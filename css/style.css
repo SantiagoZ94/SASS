@@ -3,8 +3,6 @@
   padding: 0;
 }
 
-/*nesting o anidamiento*/
-/*VARIABLES*/
 .logo {
   border-radius: 20%;
   width: 120px;
@@ -15,9 +13,15 @@
   margin-left: 40px;
 }
 
+.servicios, .opiniones {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
 /*   MAIN INDEX   */
 .hero {
-  width: 100%;
+  width: 100vw;
   height: 80vh;
   background: linear-gradient(rgba(0, 0, 0, 0.432), rgba(0, 0, 0, 0.432)), url(https://img.freepik.com/foto-gratis/medicos-enfermeras-coordinan-manos-concepto-trabajo-equipo_43314-961.jpg?w=1380);
   background-position: center;
@@ -47,23 +51,16 @@
 
 /*Opiniones*/
 .opiniones {
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
   margin-top: 60px;
   padding-bottom: 120px;
 }
 
 .opiniones-inicio {
-  background-color: #F1FAEE;
   margin: 30px 30px 30px 30px;
 }
 
 /*   MAIN SERVICIOS   */
 .servicios {
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
   margin-top: 60px;
   padding-bottom: 120px;
 }
@@ -77,16 +74,28 @@
 
 /* botones de servicio*/
 .boton-servicios {
-  background-color: #A8DADC;
-  text-decoration: none;
-  border: 2px solid #1D3557;
-  font-size: white;
-  font-size: 22px;
+  background-color: #1D3557;
+  border: 2px #F1FAEE solid;
+  border-radius: 20%;
+  font-size: 20px #F1FAEE;
 }
 
 /*MEDIA QUERY TABLET*/
 @media (min-width: 451px) and (max-width: 960px) {
   /*MAIN TABLET*/
+  .opiniones {
+    flex-direction: column;
+  }
+
+  .servicios {
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+  }
+}
+/*MEDIA QUERY MOBILE*/
+@media (max-width: 450px) {
+  /*MAIN MOBILE*/
   .opiniones {
     flex-direction: column;
   }
@@ -159,7 +168,30 @@ footer div a img:hover {
     transform: scale(1.15);
     transition: all 300ms;
   }
+
+  footer {
+    flex-direction: column;
+    background: rgb(69, 123, 157);
+    background: linear-gradient(0deg, rgb(69, 123, 157) 26%, rgb(241, 250, 238) 83%);
+  }
+
+  .redes-footer {
+    width: 100px;
+    height: 60px;
+    margin-right: 10px;
+    padding-left: 40px;
+    transition: all 300ms;
+  }
+
+  footer div a img:hover {
+    transform: scale(1.15);
+    transition: all 300ms;
+  }
 }
-/* lista */
+.opiniones, .servicios {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
 
 /*# sourceMappingURL=style.css.map */
